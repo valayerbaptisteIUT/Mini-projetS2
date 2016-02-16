@@ -1,2 +1,3 @@
-# test
-c'est pour tester
+Mini-Projet
+
+Chess Board
