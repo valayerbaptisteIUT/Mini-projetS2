@@ -8,13 +8,12 @@ public class ChessBoardApp
 {
 
 	/**
-	 * Main which create a new chess game and start the game.
+	 * Main which create a new chess game
 	 * @param args
 	 */
 	public static void main(String[] args)
 	{
-		ChessGame chessgame = new ChessGame();	//Create a new game
-		new chessgame.playChess();
+		new ChessGame().play();
 	}
 
 }

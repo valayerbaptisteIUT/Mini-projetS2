@@ -6,8 +6,29 @@
  */
 public class ChessGame
 {
+	/**
+	 * initialize of the chess board variable
+	 */
+	private Board board;
+	/**
+	 * initialize of the pawn variable
+	 */
+	private Pawn pawn;
+
+	/**
+	 * create a new Chess game in this initial state (the board contains the pawn at their initial locations) 
+	 */
 	public ChessGame()
 	{
-		Pawn board[][] = new Pawn[8][8];
+		this.pawn = new Pawn();
+		this.board = new Board();
+	}
+
+	/**
+	 * start the game, allow yourself to move pawns and end the game when a player is checkmate
+	 */
+	public void play()
+	{
+		
 	}
 }
