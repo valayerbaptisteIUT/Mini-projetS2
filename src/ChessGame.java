@@ -1,6 +1,6 @@
-
 /**
- * Class which represent the principal components necessary to play a chess game
+ * Class which represents a chess game
+ * chess's rules : https://www.chess.com/learn-how-to-play-chess
  * @author valayerb
  * 
  */
@@ -10,22 +10,17 @@ public class ChessGame
 	 * initialize of the chess board variable
 	 */
 	private Board board;
+	
 	/**
-	 * initialize of the pawn variable
-	 */
-	private Pawn pawn;
-
-	/**
-	 * create a new Chess game in this initial state (the board contains the pawn at their initial locations) 
+	 * create a new Chess game, ready to be played (the board contains the pawn at their initial locations) 
 	 */
 	public ChessGame()
 	{
-		this.pawn = new Pawn();
 		this.board = new Board();
 	}
 
 	/**
-	 * start the game, allow yourself to move pawns and end the game when a player is checkmate
+	 * plays the game while one player is not checkmate, Each player can move one pawn by turn
 	 */
 	public void play()
 	{
