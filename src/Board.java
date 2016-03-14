@@ -5,6 +5,10 @@
  */
 public class Board
 {
+	// TODO fix array field declaration
+	// visibility / type / name
+	
+	// TODO rename field
 	/**
 	 * initialize of the this.square variable
 	 */
