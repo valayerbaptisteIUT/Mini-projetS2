@@ -1,3 +1,5 @@
+// TODO update README.md (what/who)
+
 /**
  * it's a application that launches a chess game
  * @author valayerb
