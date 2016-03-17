@@ -5,47 +5,47 @@
  */
 public class Board
 {
-	// TODO fix array field declaration
+	// TODO(done) fix array field declaration
 	// visibility / type / name
 	
-	// TODO rename field
+	// TODO(done) rename field
 	/**
-	 * initialize of the this.square variable
+	 * initialize of the this.grid variable
 	 */
-	private Pawn square[][];
+	private Piece[][] grid;
 
 	/**
-	 * Create a new board, that contains the pawn at their initial locations
+	 * Create a new board, that contains the Piece at their initial locations
 	 */
 /*	public Board()
 	{
-		square = new Piece[8][8];
+		grid = new Piece[8][8];
 		int i=0;
 		
 		while(i<8)
 			{
-				this.square[i][1]= new Pawn();
-				this.square[i][6]= new Pawn();
+				this.grid[i][1]= new Piece();
+				this.grid[i][6]= new Piece();
 				i++;
 			}
 		
-		this.square[0][0]=Pawn();
-		this.square[1][0]=Pawn();
-		this.square[2][0]=Pawn();
-		this.square[3][0]=Pawn();
-		this.square[4][0]=Pawn();
-		this.square[5][0]=Pawn();
-		this.square[6][0]=Pawn();
-		this.square[7][0]=Pawn();
+		this.grid[0][0]=Piece();
+		this.grid[1][0]=Piece();
+		this.grid[2][0]=Piece();
+		this.grid[3][0]=Piece();
+		this.grid[4][0]=Piece();
+		this.grid[5][0]=Piece();
+		this.grid[6][0]=Piece();
+		this.grid[7][0]=Piece();
 		
-		this.square[0][7]=Pawn();
-		this.square[1][7]=Pawn();
-		this.square[2][7]=Pawn();
-		this.square[3][7]=Pawn();
-		this.square[4][7]=Pawn();
-		this.square[5][7]=Pawn();
-		this.square[6][7]=Pawn();
-		this.square[7][7]=Pawn();
+		this.grid[0][7]=Piece();
+		this.grid[1][7]=Piece();
+		this.grid[2][7]=Piece();
+		this.grid[3][7]=Piece();
+		this.grid[4][7]=Piece();
+		this.grid[5][7]=Piece();
+		this.grid[6][7]=Piece();
+		this.grid[7][7]=Piece();
 		
 	}*/
 	

@@ -1,3 +1,3 @@
-Mini-Projet
+Mini-Projet of VALAYER Baptiste and REDON Raphaël
 
-Chess Board
+The aim of the project is to create a Chess's game.
