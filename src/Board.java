@@ -10,7 +10,7 @@ public class Board
 	
 	// TODO(done) rename field
 	/**
-	 * initialize of the this.grid variable
+	 * initialize of grid variable
 	 */
 	private Piece[][] grid;
 
