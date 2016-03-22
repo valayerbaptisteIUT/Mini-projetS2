@@ -5,18 +5,18 @@
  */
 public class Board
 {
-	// TODO fix comment
+	// TODO fix comment(done)
 	/**
 	 * initialize of grid variable
 	 */
 	private int[][] grid;
 
 	/**
-	 * Create a new board, that contains pawns at their initial locations
+	 * Create a new board, that contains number 1 for white pawns and 2 for black pawns at their initial locations
 	 */
 	public Board()
 	{
-		grid = new int[8][8];
+		this.grid = new int[8][8];
 		this.grid[0][0]=1;
 		this.grid[1][0]=1;
 		this.grid[2][0]=1;
@@ -48,7 +48,6 @@ public class Board
 		for (int line=0;line<8;line++)
 				{
 					String row=""+line;
-					
 					for (int column=0;column<8;column++)
 					{
 						if (this.grid[column][line] == 1)

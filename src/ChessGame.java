@@ -20,7 +20,7 @@ public class ChessGame
 		this.board = new Board();
 	}
 
-	// TODO clean algorithm
+	// TODO clean algorithm(done)
 	/**
 	 * plays the game (while one player is not checkmate, each player can move one pawn by turn)
 	 * The method must known the player who play and his move to update the game.
@@ -50,10 +50,10 @@ public class ChessGame
 		}
 	}
 
-	// TODO fix comment
+	// TODO fix comment(done)
 	/**
 	 * Return game status (ended or not) 
-	 * @return
+	 * @return boolean
 	 */
 	private boolean isGameFinished()
 	{

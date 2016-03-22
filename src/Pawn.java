@@ -1,4 +1,4 @@
-// TODO consider for now that there are only pawns
+// TODO consider for now that there are only pawns(done)
 /**
  * This class represents Piece
  * @author valayerb
