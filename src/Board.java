@@ -5,17 +5,14 @@
  */
 public class Board
 {
-	// TODO(done) fix array field declaration
-	// visibility / type / name
-	
-	// TODO(done) rename field
+	// TODO fix comment
 	/**
 	 * initialize of grid variable
 	 */
 	private Piece[][] grid;
 
 	/**
-	 * Create a new board, that contains the Piece at their initial locations
+	 * Create a new board, that contains pawns at their initial locations
 	 */
 /*	public Board()
 	{

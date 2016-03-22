@@ -1,9 +1,9 @@
-
+// TODO consider for now that there are only pawns
 /**
  * This class represents Piece
  * @author valayerb
  */
-public  abstract class Piece
+public abstract class Piece
 {	
 	/**
 	 * Piece's abscissa

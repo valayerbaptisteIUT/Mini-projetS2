@@ -6,7 +6,7 @@
  */
 public class ChessGame
 {
-	// TODO (done) fix comment (this initializes nothing, it is something from Chess Game point-of-view
+	// TODO fix comment (ask for advice)
 	/**
 	 * Create Board's variable
 	 */
@@ -20,8 +20,7 @@ public class ChessGame
 		this.board = new Board();
 	}
 
-	// TODO (done) detail "each player can move one pawn by turn"
-	// what information this method need and how this information is used to update game
+	// TODO clean algorithm
 	/**
 	 * plays the game (while one player is not checkmate, each player can move one pawn by turn)
 	 * The method must known the player who play and his move to update the game.
@@ -48,8 +47,9 @@ public class ChessGame
 		}
 	}
 
+	// TODO fix comment
 	/**
-	 * Return the statut of the game if it's end (one player is checkmate or if only the king is alive each player or if one player surrender) or not 
+	 * Return game status (ended or not) 
 	 * @return
 	 */
 	private boolean isGameFinished()
