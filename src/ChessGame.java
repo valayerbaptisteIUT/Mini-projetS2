@@ -38,12 +38,15 @@ public class ChessGame
 	{
 		while (!this.isGameFinished())
 		{
+			System.out.println(this.board);
 			boolean moved = false;
 			
 			while(!moved)
 			{
-				//if (...) moved = true;
+				//trymove(Piece piece0, int xpos, int ypos)
+				//ask other move
 			}
+			//switch player
 		}
 	}
 
@@ -54,7 +57,6 @@ public class ChessGame
 	 */
 	private boolean isGameFinished()
 	{
-		// TODO Auto-generated method stub
 		return false;
 	}
 }

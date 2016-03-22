@@ -3,7 +3,7 @@
  * This class represents Piece
  * @author valayerb
  */
-public abstract class Piece
+public class Pawn
 {	
 	/**
 	 * Piece's abscissa
@@ -18,5 +18,4 @@ public abstract class Piece
 	 * method move which dependent of the type of piece.
 	 * @return
 	 */
-	public abstract Piece move();
 }
