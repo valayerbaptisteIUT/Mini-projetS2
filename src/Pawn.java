@@ -5,6 +5,7 @@
  */
 public class Pawn
 {	
+	// TODO gather x and y in an object
 	/**
 	 * Piece's abscissa
 	 */

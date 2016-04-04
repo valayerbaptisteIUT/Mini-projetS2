@@ -16,7 +16,9 @@ public class Board
 	 */
 	public Board()
 	{
+		// TODO use constants for grid size
 		this.grid = new int[8][8];
+		// TODO use constants for grid cell content
 		this.grid[0][0]=1;
 		this.grid[1][0]=1;
 		this.grid[2][0]=1;
