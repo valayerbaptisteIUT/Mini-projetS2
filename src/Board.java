@@ -5,7 +5,19 @@
  */
 public class Board
 {
+	/**
+	 * Constants for the size of the grid 
+	 */
 	// TODO fix comment(done)
+	private final static int DEFAULT_size=8;
+	/**
+	 * Constants for cell content (White piece)
+	 */
+	private final static int DEFAULT_contentB=1;
+	/**
+	 * Constants for cell content (Black piece)
+	 */
+	private final static int DEFAULT_contentW=2;
 	/**
 	 * initialize of grid variable
 	 */
@@ -16,26 +28,24 @@ public class Board
 	 */
 	public Board()
 	{
-		// TODO use constants for grid size
-		this.grid = new int[8][8];
-		// TODO use constants for grid cell content
-		this.grid[0][0]=1;
-		this.grid[1][0]=1;
-		this.grid[2][0]=1;
-		this.grid[3][0]=1;
-		this.grid[4][0]=1;
-		this.grid[5][0]=1;
-		this.grid[6][0]=1;
-		this.grid[7][0]=1;
-		
-		this.grid[0][7]=2;
-		this.grid[1][7]=2;
-		this.grid[2][7]=2;
-		this.grid[3][7]=2;
-		this.grid[4][7]=2;
-		this.grid[5][7]=2;
-		this.grid[6][7]=2;
-		this.grid[7][7]=2;
+		// TODO use constants for grid size(done)
+		this.grid = new int[DEFAULT_size][DEFAULT_size];
+		// TODO use constants for grid cell content(done)
+
+		for(int index=0;index<2;index++)
+		{
+			for(int indexbis=0;indexbis<8;indexbis++)
+			{
+				this.grid[indexbis][index]=DEFAULT_contentW;
+			}
+		}
+		for(int index=6;index<8;index++)
+		{
+			for(int indexbis=0;indexbis<8;indexbis++)
+			{
+				this.grid[indexbis][index]=DEFAULT_contentB;
+			}
+		}
 		
 	}
 	
@@ -44,23 +54,38 @@ public class Board
 	 */
 	public String toString()
 	{
-		String ascii = " ABCDEFGH\n";
+		String ascii = " ABCDEFGH";
 
-		System.out.println(ascii);
 		for (int line=0;line<8;line++)
 				{
 					String row=""+line;
 					for (int column=0;column<8;column++)
 					{
-						if (this.grid[column][line] == 1)
-						{row=row+"W";}
-						if (this.grid[column][line] == 2)
-						{row=row+"B";}
-						
+						switch(this.grid[column][line])
+						{
+							case 1 :row=row+"B";
+							break;
+							case 2 :row=row+"W";
+							break;
+							default : row=row+" ";
+						}
 					}
-					System.out.println(line);
+						
+					System.out.println(row);
 				}
 			
 		return ascii;
+	}
+
+	public boolean isMoveValid(Move move)
+	{
+		// TODO to be completed
+		return true;
+	}
+
+	public void processMove(Move move)
+	{
+		// TODO to be completed
+		
 	}
 }

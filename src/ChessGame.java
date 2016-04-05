@@ -6,54 +6,92 @@
  */
 public class ChessGame
 {
-	// TODO fix comment (ask for advice)
 	/**
-	 * Create Board's variable
+	 * constant refer to white player
+	 */
+	private final static int WHITE_PLAYER_NUMBER = 0;
+	/**
+	 * constant refer to black player
+	 */
+	private final static int BLACK_PLAYER_NUMBER = 1;
+	/**
+	 * chess board
 	 */
 	private Board board;
 	
+	// TODO write comment(done)
 	/**
-	 * create a new Chess game, ready to be played (the board contains pawns at their initial locations) 
+	 * black player
+	 */
+	private Player blackPlayer;
+
+	// TODO write comment(done)
+	/**
+	 * white player
+	 */
+	private Player whitePlayer;
+	
+	/**
+	 * create a new Chess game, ready to be played 
+	 * (the board contains pawns at their initial locations, black and white players are ready) 
 	 */
 	public ChessGame()
 	{
 		this.board = new Board();
+		this.blackPlayer = new Player();
+		this.whitePlayer = new Player();
 	}
 
-	// TODO clean algorithm(done)
+
 	/**
-	 * plays the game (while one player is not checkmate, each player can move one pawn by turn)
-	 * The method must known the player who play and his move to update the game.
+	 * plays the game 
 	 * 
-	 * While one player isn't checkmate
-	 *  While the move isn't possible
-	 * 		Ask the move of one player : if it is possible the method move the piece
-	 * 									 else repeat
-	 * 	End
-	 * switch player
-	 * End
+	 * <current player is white player>
+	 * While (<game is not over>)
+	 * {
+	 *   Do
+	 *   {
+	 * 		<Ask the move of current player>
+	 *   }
+	 *	 While (<move isn't possible>)
+	 * 	 <Process move>
+	 *   <Switch current player>
+	 * }
 	 * 
 	 */
 	public void play()
 	{
+		int currentPlayerNumber = WHITE_PLAYER_NUMBER;
+		
 		while (!this.isGameFinished())
 		{
-			System.out.println(this.board);
-			boolean moved = false;
+			Player currentPlayer = this.whitePlayer;
+			if (currentPlayerNumber == BLACK_PLAYER_NUMBER)
+				currentPlayer = this.blackPlayer;
 			
-			while(!moved)
+			System.out.println(this.board);
+			
+			Move move = null;
+			while (true)
 			{
-				//trymove(Piece piece0, int xpos, int ypos)
-				//ask other move
+				move = currentPlayer.askForMove();
+				if (this.board.isMoveValid(move))
+					break;
 			}
-			//switch player
+			this.board.processMove(move);
+			
+			if (currentPlayerNumber == WHITE_PLAYER_NUMBER)
+				currentPlayerNumber = BLACK_PLAYER_NUMBER;
+			else
+				currentPlayerNumber = WHITE_PLAYER_NUMBER;
+			
 		}
 	}
 
 	// TODO fix comment(done)
 	/**
 	 * Return game status (ended or not) 
-	 * @return boolean
+	 * @return <tt>true</tt> if game is over, <tt>false</tt> if not
 	 */
 	private boolean isGameFinished()
 	{

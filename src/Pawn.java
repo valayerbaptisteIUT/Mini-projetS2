@@ -5,15 +5,12 @@
  */
 public class Pawn
 {	
-	// TODO gather x and y in an object
+	// TODO gather x and y in an object(done
+
 	/**
-	 * Piece's abscissa
+	 * a position associated at a pawn
 	 */
-	public int PosX;
-	/**
-	 * Piece's ordinate
-	 */
-	public int PosY;
+	private Position positionpawn;
 	
 	/**
 	 * method move which dependent of the type of piece.
