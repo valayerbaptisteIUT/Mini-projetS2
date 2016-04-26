@@ -7,29 +7,13 @@
 public class ChessGame
 {
 	/**
-	 * constant refer to white player
-	 */
-	private final static int WHITE_PLAYER_NUMBER = 0;
-	/**
-	 * constant refer to black player
-	 */
-	private final static int BLACK_PLAYER_NUMBER = 1;
-	/**
 	 * chess board
 	 */
 	private Board board;
-	
-	// TODO write comment(done)
-	/**
-	 * black player
-	 */
-	private Player blackPlayer;
 
-	// TODO write comment(done)
-	/**
-	 * white player
-	 */
-	private Player whitePlayer;
+	private Player[] players;
+
+
 	
 	/**
 	 * create a new Chess game, ready to be played 
@@ -38,8 +22,10 @@ public class ChessGame
 	public ChessGame()
 	{
 		this.board = new Board();
-		this.blackPlayer = new Player();
-		this.whitePlayer = new Player();
+		
+		this.players = new Player[2];
+		this.players[0] = new Player();
+		this.players[1] = new Player();
 	}
 
 
@@ -61,9 +47,11 @@ public class ChessGame
 	 */
 	public void play()
 	{
-		int currentPlayerNumber = WHITE_PLAYER_NUMBER;
+		//int currentPlayerNumber = WHITE_PLAYER_NUMBER;
 		
-		while (!this.isGameFinished())
+		
+		int currentplayernumber=0;
+		/*while (!this.isGameFinished())
 		{
 			Player currentPlayer = this.whitePlayer;
 			if (currentPlayerNumber == BLACK_PLAYER_NUMBER)
@@ -84,6 +72,24 @@ public class ChessGame
 				currentPlayerNumber = BLACK_PLAYER_NUMBER;
 			else
 				currentPlayerNumber = WHITE_PLAYER_NUMBER;
+			
+		}*/
+		
+		while (!this.isGameFinished())
+		{
+			Player currentPlayer=this.players[currentplayernumber];
+			
+			System.out.println(this.board+"\n");
+			
+			Move move = null;
+			while (true)
+			{
+				move = currentPlayer.askForMove();
+				if (this.board.isMoveValid(move))
+					break;
+			}
+			this.board.processMove(move);
+			currentplayernumber = (currentplayernumber+1)%2;
 			
 		}
 	}

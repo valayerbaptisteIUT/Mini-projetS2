@@ -8,25 +8,37 @@ public class Position
 	/**
 	 * Piece's abscissa
 	 */
-	private int PosX;
+	private final int posX;
 	/**
 	 * Piece's ordinate
 	 */
-	private int PosY;
+	private final int posY;
+	
+	
+	/**
+	 * constructor which initialize a position
+	 * @param x0 abscissa's position
+	 * @param y0 ordinate's position
+	 */
+	public Position(int x0,int y0)
+	{
+		this.posX=x0;
+		this.posY=y0;
+	}
 	
 	/**
 	 * @return abscissa's position
 	 */
 	public int getPosX()
 	{
-		return this.PosX;
+		return this.posX;
 	}
 	/**
 	 * @return ordinate's position
 	 */
 	public int getPosY()
 	{
-		return this.PosY;
+		return this.posY;
 	}
 
 }

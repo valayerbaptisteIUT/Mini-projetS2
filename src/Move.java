@@ -10,20 +10,37 @@ public class Move
 	/**
 	 * a position before move
 	 */
-	private Position PosDepart;
+	private final Position posDepart;
 	/**
 	 * a position completed
 	 */
-	private Position PosArrive;
+	private final Position posArrive;
 
 	/**
-	 * method which modify the position of pawn (like player ask)
-	 * @param PosXArr new abscissa position choose by player
-	 * @param PosYArr new ordinate position choose by player
+	 * constructor which modify the position of pawn (like player ask)
+	 * @param posDep position choose by player(abscissa,ordinate)
+	 * @param posArr new position choose by player for the same pawn(abscissa,ordinate)
 	 */
-	public Move(Position PosDep, Position PosArr)
+	public Move(Position posDep, Position posArr)
 	{
-		this.PosDepart=PosDep;
-		this.PosArrive=PosArr;
+		this.posDepart=posDep;
+		this.posArrive=posArr;
 	}
+
+	/**
+	 * @return posDepart
+	 */
+	public Position getPosDepart()
+	{
+		return this.posDepart;
+	}
+
+	/**
+	 * @return posArrive
+	 */
+	public Position getPosArrive()
+	{
+		return this.posArrive;
+	}
+	
 }
