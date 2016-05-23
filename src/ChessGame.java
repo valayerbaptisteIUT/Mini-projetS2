@@ -11,6 +11,9 @@ public class ChessGame
 	 */
 	private Board board;
 
+	/**
+	 * a table of player
+	 */
 	private Player[] players;
 
 

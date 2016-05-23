@@ -1,26 +1,32 @@
 import java.util.List;
+
+
 /**
- * class refer to a particular piece : a Pawn
+ * class refer to a particular piece : a Rook
  * @author valayerb
+ *
  */
-public class Pawn extends Piece
+public class Rook extends Piece
 {
 
 	/**
-	 * constructor which created Pawn associated with a color choose in param (black o withe)
-	 * @param color (color of Pawn what want to create)
+	 * constructor which created Rook associated with a color choose in param (black o withe)
+	 * @param color (color of Rook what want to create)
 	 */
-	public Pawn(Color color)
+	public Rook(Color color)
 	{
 		super(color);
+		// TODO Auto-generated constructor stub
 	}
+
 
 	@Override
 	public String toString()
 	{
 		// TODO Auto-generated method stub
-		return "P"+super.toString();
+		return "R"+super.toString();
 	}
+
 
 	@Override
 	public List<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
@@ -28,6 +34,4 @@ public class Pawn extends Piece
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
 }

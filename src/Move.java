@@ -8,20 +8,20 @@ public class Move
 
 	
 	/**
-	 * a position before move
+	 * a ChessGamePosition before move
 	 */
-	private final Position posDepart;
+	private final ChessGamePosition posDepart;
 	/**
-	 * a position completed
+	 * a ChessGamePosition completed
 	 */
-	private final Position posArrive;
+	private final ChessGamePosition posArrive;
 
 	/**
-	 * constructor which modify the position of pawn (like player ask)
-	 * @param posDep position choose by player(abscissa,ordinate)
-	 * @param posArr new position choose by player for the same pawn(abscissa,ordinate)
+	 * constructor which modify the ChessGamePosition of pawn (like player ask)
+	 * @param posDep ChessGamePosition choose by player(abscissa,ordinate)
+	 * @param posArr new ChessGamePosition choose by player for the same pawn(abscissa,ordinate)
 	 */
-	public Move(Position posDep, Position posArr)
+	public Move(ChessGamePosition posDep, ChessGamePosition posArr)
 	{
 		this.posDepart=posDep;
 		this.posArrive=posArr;
@@ -30,7 +30,7 @@ public class Move
 	/**
 	 * @return posDepart
 	 */
-	public Position getPosDepart()
+	public ChessGamePosition getPosDepart()
 	{
 		return this.posDepart;
 	}
@@ -38,7 +38,7 @@ public class Move
 	/**
 	 * @return posArrive
 	 */
-	public Position getPosArrive()
+	public ChessGamePosition getPosArrive()
 	{
 		return this.posArrive;
 	}

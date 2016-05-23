@@ -1,8 +1,6 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.Random;
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//import java.io.InputStreamReader;
 
 
 /**
@@ -15,13 +13,13 @@ public class Player
 	// TODO write comment (done)
 	
 	/**
-	 * ask to the player a move
-
+	 *ask to the player a move (in comment)
+	 *return a move with random position
 	 * @return the move asked by player
 	 */
 	public Move askForMove()
 	{
-		/*// Note : rentre un movement du type "A1,B2" puis extraire avant virgule apres virgule puis transformer A1 en position et B2 en position puis retourne le mouvement composer de (A1 B2)
+		/*// Note : rentre un movement du type "A1,B2" puis extraire avant virgule apres virgule puis transformer A1 en ChessGamePosition et B2 en ChessGamePosition puis retourne le mouvement composer de (A1 B2)
 		try
 		{
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in,"US-ASCII"));
@@ -35,18 +33,9 @@ public class Player
 		
 		// TODO to be completed
 		return null;*/
-		Random randomGenerator = new Random();
+
 		
-		int ypositionDep;
-		int xpositionDep;
-		int xpositionArr;
-		int ypositionArr;
-		
-		Position posDepart = new Position(xpositionDep = randomGenerator.nextInt(8),ypositionDep = randomGenerator.nextInt(8));
-		Position posArrive = new Position(xpositionArr = xpositionDep,ypositionArr = ypositionDep+1);
-		Move pawnmove = new Move(posDepart,posArrive);
-		
-		return pawnmove;
+		return new Move(new ChessGamePosition(),new ChessGamePosition());
 	}
 
 }
