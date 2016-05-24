@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -24,7 +25,7 @@ public class King extends Piece
 	}
 	
 	@Override
-	public List<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
+	public Set<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
 	{
 		return null;
 	}

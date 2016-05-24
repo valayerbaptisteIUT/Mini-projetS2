@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -39,8 +40,9 @@ public abstract class Piece
 	/**
 	 * @param startpos 
 	 * @return a list of position where piece can go
+	 * @throws OutOfChessboardException 
 	 */
-	public abstract List<ChessGamePosition> possiblemovement(ChessGamePosition startpos);
+	public abstract Set<ChessGamePosition> possiblemovement(ChessGamePosition startpos);
 	// 3 methodes : - Bouger une piece
 	//				- manger une piece
 	//				- piece peut elle sauter par dessus d'autre piece

@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 /**
  * class refer to a particular piece : a Knight
@@ -27,7 +28,7 @@ public class Knight extends Piece
 
 
 	@Override
-	public List<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
+	public Set<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
 	{
 		// TODO Auto-generated method stub
 		return null;

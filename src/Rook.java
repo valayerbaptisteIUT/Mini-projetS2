@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -29,7 +30,7 @@ public class Rook extends Piece
 
 
 	@Override
-	public List<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
+	public Set<ChessGamePosition> possiblemovement(ChessGamePosition startpos)
 	{
 		// TODO Auto-generated method stub
 		return null;

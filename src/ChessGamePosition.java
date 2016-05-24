@@ -68,11 +68,43 @@ public class ChessGamePosition
 	}
 	
 	/**
+	 * a methode call on a position to found it neighbour position in a direction choose
+	 * @param direction (up,down,left,right and all the diagonal)
 	 * @return position
 	 */
-	public ChessGamePosition neighbourposition()
+	public ChessGamePosition neighbourposition(Direction direction)
 	{
-		return null;	
+		ChessGamePosition tet = null;
+		try
+		{
+			tet = new ChessGamePosition(this.getPosX()+direction.getPosx(),this.getPosY()+direction.getPosy());
+		}
+		catch (OutOfChessboardException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return tet;
+	}
+	/**
+	 * a methode call on a position to found it neighbour position in a direction choose and at a rangechoose too
+	 * @param direction (up,down,left,right and all the diagonal)
+	 * @param range 
+	 * @return position
+	 */
+	public ChessGamePosition neighbourposition(Direction direction, int range)
+	{
+		ChessGamePosition tet = null;
+		try
+		{
+			tet = new ChessGamePosition(this.getPosX()+(direction.getPosx()*range),this.getPosY()+(direction.getPosy()*range));
+		}
+		catch (OutOfChessboardException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return tet;	
 	}
 
 }
